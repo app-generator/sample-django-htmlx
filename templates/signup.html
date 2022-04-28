@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}SignUp{% endblock %}
+{% block content %}
+<div class="login-form">
+	<!-- Pills content -->
+	<div class="">
+		<div class="">
+			<h1 class="text-center mb-3">Register</h1>
+			<form class=""  method="post" action="">
+				{% csrf_token %}
+				<div class="text-center mb-2">
+					<p>Register with:</p>
+					<button type="button" class="btn btn-link btn-floating mx-1">
+						<i class="fab fa-facebook-f"></i>
+					</button>
+
+					<button type="button" class="btn btn-link btn-floating mx-1">
+						<i class="fab fa-google"></i>
+					</button>
+
+					<button type="button" class="btn btn-link btn-floating mx-1">
+						<i class="fab fa-twitter"></i>
+					</button>
+
+					<button type="button" class="btn btn-link btn-floating mx-1">
+						<i class="fab fa-github"></i>
+					</button>
+				</div>
+
+				<p class="text-center">or:</p>
+
+				<!-- Name input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="name">Name</label>
+					<input type="text" id="name" name="name" class="form-control" />
+				</div>
+				<!-- Email input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="email">Email</label>
+					<input type="email" id="email" name="email" class="form-control" />
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="password">Password</label>
+					<input type="password" id="password" name="password" class="form-control" />
+				</div>
+
+				<!-- Repeat Password input -->
+				<div class="form-outline mb-4">
+					<label class="form-label" for="registerRepeatpassword">Repeat password</label>
+					<input type="password" id="registerRepeatpassword" name="registerRepeatpassword" class="form-control" />
+				</div>
+
+				<!-- Checkbox -->
+				<div class="form-check d-flex justify-content-center mb-4">
+					<input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+						aria-describedby="registerCheckHelpText" />
+					<label class="form-check-label" for="registerCheck">
+						I have read and agree to the terms
+					</label>
+				</div>
+
+				<!-- Submit button -->
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary btn-block mb-3 w-100">Register</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Pills content -->
+</div>
+{% endblock content %}
