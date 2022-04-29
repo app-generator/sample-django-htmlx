@@ -7,7 +7,7 @@
 	<div class="login-form">
 		<div class="">
 			<h1 class="text-center mb-3">Login</h1>
-			<form method="post">
+			<form hx-post="{% url 'login' %}" hx-push-url="true" hx-target="#mainarea">
 				{% csrf_token %}
 				<div class="text-center mb-2">
 					<p>Login with:</p>
@@ -45,27 +45,27 @@
 				<!-- 2 column grid layout -->
 				<!-- <div class="row mb-4">
 					<div class="col-md-6 d-flex"> -->
-						<!-- Checkbox -->
-						<!-- <div class="form-check mb-3 mb-md-0">
+				<!-- Checkbox -->
+				<!-- <div class="form-check mb-3 mb-md-0">
 							<input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
 							<label class="form-check-label" for="loginCheck"> Remember me </label>
 						</div>
 					</div> -->
 
-					<!-- <div class="col-md-6 d-flex justify-content-center"> -->
-						<!-- Simple link -->
-						<!-- <a href="#!">Forgot password?</a> -->
-					<!-- </div> -->
+				<!-- <div class="col-md-6 d-flex justify-content-center"> -->
+				<!-- Simple link -->
+				<!-- <a href="#!">Forgot password?</a> -->
+				<!-- </div> -->
 				<!-- </div> -->
 
 				<!-- Submit button -->
 				<div class="text-center">
-					<button type="submit" class="btn btn-primary btn-block mb-4 w-100" >Login</button>
+					<button type="submit" class="btn btn-primary btn-block mb-4 w-100">Login</button>
 				</div>
 
 				<!-- Register buttons -->
 				<div class="text-center">
-					<p>Not a member? <a href="{% url 'signup' %}">Register</a></p>
+					<p>Not a member? <a href='#' style="color: blue;" hx-get="{% url 'signup' %}">Register</a></p>
 				</div>
 			</form>
 		</div>

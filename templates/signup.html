@@ -3,10 +3,10 @@
 {% block content %}
 <div class="login-form">
 	<!-- Pills content -->
-	<div class="">
+	<div class=""  hx-boost="true" hx-push-url="true">
 		<div class="">
 			<h1 class="text-center mb-3">Register</h1>
-			<form class=""  method="post" action="">
+			<form class=""  hx-post="{% url 'signup' %}" hx-target="#mainarea">
 				{% csrf_token %}
 				<div class="text-center mb-2">
 					<p>Register with:</p>
@@ -38,6 +38,7 @@
 				<div class="form-outline mb-4">
 					<label class="form-label" for="email">Email</label>
 					<input type="email" id="email" name="email" class="form-control" />
+					
 				</div>
 
 				<!-- Password input -->
