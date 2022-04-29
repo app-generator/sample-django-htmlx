@@ -6,8 +6,11 @@
 	<div class=""  hx-boost="true" hx-push-url="true">
 		<div class="">
 			<h1 class="text-center mb-3">Register</h1>
+
 			<form class=""  hx-post="{% url 'signup' %}" hx-target="#mainarea">
+			
 				{% csrf_token %}
+			
 				<div class="text-center mb-2">
 					<p>Register with:</p>
 					<button type="button" class="btn btn-link btn-floating mx-1">
